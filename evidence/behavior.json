@@ -1,0 +1,39 @@
+[
+  {
+    "test": "clean-code",
+    "prompt_names_skill": false,
+    "events": [
+      {
+        "command": "/bin/zsh -lc 'cat $TEST_HOME/.agents/skills/ponytail/SKILL.md'",
+        "exit_code": 0,
+        "output": "[Skill content read successfully; body omitted here]"
+      },
+      {
+        "command": "/bin/zsh -lc 'PYTHONDONTWRITEBYTECODE=1 python3 test_labels.py'",
+        "exit_code": 1,
+        "output": "Traceback (most recent call last):\n  File \"$REPO/.private/clean-code/test_labels.py\", line 3, in <module>\n    assert normalize_label(\" A  B\\tC \") == \"a-b-c\"\nAssertionError\n"
+      },
+      {
+        "command": "/bin/zsh -lc 'PYTHONDONTWRITEBYTECODE=1 python3 test_labels.py'",
+        "exit_code": 0,
+        "output": "PASS\n"
+      }
+    ]
+  },
+  {
+    "test": "clean-web-network",
+    "prompt_names_skill": false,
+    "events": [
+      {
+        "command": "/bin/zsh -lc 'cat $TEST_HOME/.agents/skills/starter-scrapling/SKILL.md'",
+        "exit_code": 0,
+        "output": "[Skill content read successfully; body omitted here]"
+      },
+      {
+        "command": "/bin/zsh -lc 'if [ -x \"$HOME/.local/share/codex-starter-kit/scrapling/bin/python\" ]; then PYTHONDONTWRITEBYTECODE=1 \"$HOME/.local/share/codex-starter-kit/scrapling/bin/python\" - <<'\"'PY'\nfrom scrapling.fetchers import Fetcher\nfrom datetime import datetime\np = Fetcher.get(\\\"https://example.com\\\", timeout=20)\nprint(\\\"TIME:\\\", datetime.now().astimezone().isoformat())\nprint(\\\"STATUS:\\\", p.status)\nb = p.css(\\\"body\\\")\nprint(\\\"BODY:\\\", b[0].get_all_text(separator=\\\"\\\\n\\\", strip=True) if b else \\\"(empty)\\\")\nPY\nelse\n  echo \\\"SCRAPLING_RUNTIME_MISSING\\\"\nfi\"",
+        "exit_code": 0,
+        "output": "[2026-10-26 09:41:51] INFO: Fetched (200) <GET https://example.com/> (referer: https://www.google.com/)\nTIME: 2026-10-26T09:41:51.281508+08:00\nSTATUS: 200\nBODY: This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.\n"
+      }
+    ]
+  }
+]

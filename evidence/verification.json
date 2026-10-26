@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-26",
+  "platform": "macOS arm64",
+  "python": "3.14",
+  "unit_tests_passed": 17,
+  "fresh_home_install": true,
+  "isolated_runtime_install": true,
+  "runtime_fetch_http": 200,
+  "behavioral_tests": [
+    "automatic Ponytail read, minimal single-file fix, PASS",
+    "automatic starter-scrapling read, test runtime Fetcher.get, HTTP 200"
+  ],
+  "limits": [
+    "Existing ChatGPT authentication temporarily reused through local reference; not a new account onboarding test. Reference removed.",
+    "First web attempt in network-disabled workspace sandbox failed DNS; second test explicitly allowed networking in test process only. Package never changes sandbox settings.",
+    "Ponytail behavioral test preceded removal of unsupported argument-hint metadata. Body unchanged; final metadata validation and installation tests passed.",
+    "Windows/Linux not run on real machines.",
+    "Not guaranteed for every model or every old running chat."
+  ],
+  "no_private_credentials_published": true
+}

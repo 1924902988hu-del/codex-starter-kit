@@ -1,0 +1,22 @@
+{
+  "ponytail": {
+    "repository": "https://github.com/DietrichGebert/ponytail",
+    "commit": "09c434ab73ca43761c5d8b0c5d341926c2fba710",
+    "license": "MIT",
+    "upstream_files_sha256": {
+      "LICENSE": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
+      "SKILL.md": "9badd22a32e19cb884e46dfa8d3aae82bb81dfa5484105b8b4f0262df823a509"
+    },
+    "local_adaptation": "Removed unsupported argument-hint frontmatter key for Codex skill validation; body unchanged.",
+    "files": {
+      "LICENSE": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
+      "SKILL.md": "b72d499d7a3d2490bb9b0836b0d61e9a1a6352f8eb9ceb9a66d452894c14fe33"
+    }
+  },
+  "scrapling": {
+    "repository": "https://github.com/D4Vinci/Scrapling",
+    "version": "0.5",
+    "license": "BSD-3-Clause",
+    "distribution": "optional PyPI dependency; not vendored"
+  }
+}
